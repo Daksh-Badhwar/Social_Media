@@ -9,10 +9,12 @@ import CreatePost from "./components/CreatePost";
 import Sidebar from "./components/Sidebar";
 import PostList from "./components/PostList";
 import {useState} from "react"
+import PostListProvider from "./store/post-list-store";
 
 function App() {
   const[selectedTab,setSelectedTab]=useState("Home");
   return (
+    <PostListProvider>
     <div className="app-container">
     <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
 
@@ -27,7 +29,8 @@ function App() {
       
       <Footer/>
     </div>
-    </div>  
+    </div>
+    </PostListProvider>  
   
   )
 }

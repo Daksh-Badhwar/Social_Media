@@ -20,9 +20,9 @@ const Sidebar = ({selectedTab,setSelectedTab}) => {
         <li onClick={()=>setSelectedTab("Create Post")}>
           <a href="#" className={`nav-link text-white ${selectedTab==="Create Post" && "active"}`}>
             <svg className="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-              <use href="#speedometer2"></use>
+              <use href="#speedometer2"></use> 
             </svg>
-            Create Post
+            Create Post 
           </a>
         </li>
       </ul>

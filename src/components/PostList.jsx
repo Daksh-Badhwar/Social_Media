@@ -17,6 +17,9 @@ fetch("https://dummyjson.com/posts")
     setFetching(false);
   }
   );
+  return()=>{
+    console.log("Cleaning up UseEffect.");
+  }
   
 },[])  
  

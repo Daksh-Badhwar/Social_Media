@@ -33,7 +33,7 @@ fetch('https://dummyjson.com/posts/add', {
      
         title:postTitle,
         body:postBody,
-        reactions:reactions,
+        reactions:{likes:reactions},
         userId:userId,
         tags:tags,
     /* other post data */

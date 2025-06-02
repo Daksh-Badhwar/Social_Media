@@ -8,7 +8,7 @@ const PostList=()=>{
  const {postList,addInitialPosts} = useContext(PostListData);
  const [fetching,setFetching]=useState(false)
  
-useEffect(()=>{
+/*useEffect(()=>{
 setFetching(true);
 const  controller= new AbortController();
 const signal=controller.signal;
@@ -24,7 +24,7 @@ fetch("https://dummyjson.com/posts",{signal})
     controller.abort();
   }
   
-},[])  
+},[]) */ 
  
  return (<>
  {fetching && <LoadingSpinner/>}

@@ -10,7 +10,7 @@ const  router = createBrowserRouter([
   {path:"/" ,element: <App/>,
   children: [
     {path:"/",element:<PostList/>,loader:postLoader},
-    {path:"/create-post",element:<CreatePost/>},
+    {path:"/create-post",element:<CreatePost/>,action:createPostAction},
   ]
 
   },

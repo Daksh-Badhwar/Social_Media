@@ -1,8 +1,8 @@
 //import {useRef,useContext} from "react";
 //import {PostList} from "../store/post-list-store";
 //import {useNavigate} from "react-router-dom";
-import Form from "react-router-dom";
-import redirect from "react-router-dom";
+import {Form,redirect} from "react-router-dom";
+
 
 const CreatePost=()=>{
 
@@ -76,27 +76,28 @@ export async function createPostAction (data) {
 
 const formData=await data.request.formData();  //complex object
 const postData=Object.fromEntries(formData) //dat get captured
-
+postData.tags=postData.tags.split(" ");
   //server call
-/*fetch('https://dummyjson.com/posts/add', {
+fetch('https://dummyjson.com/posts/add', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
+  body: JSON.stringify(postData),
+  /*JSON.stringify({
      
         title:postTitle,
         body:postBody,
         reactions:{likes:reactions},
         userId:userId,
-        tags:tags,
+        tags:tags, 
     
-  })
+  }) */
 })
 .then((res) => res.json())
 .then((post)=>{
-  addPost(post);
-  navigate("/");
+  console.log(post);
+  
 }
-) */
+) 
 
 return  redirect("/");
 }

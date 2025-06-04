@@ -5,6 +5,7 @@ import App from './routes/App.jsx';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import CreatePost from "./components/CreatePost";
 import PostList,{postLoader} from "./components/PostList"
+import {createPostAction} from "./components/CreatePost"
 
 const  router = createBrowserRouter([
   {path:"/" ,element: <App/>,
